@@ -4,10 +4,23 @@ public class enterInv : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "object")
+        /*
+        Debug.Log("hit");
+        if (other.CompareTag("object"))
         {
-            other.transform.position = new Vector3(Random.Range(-2.5f, 2.5f), Random.Range(-2.5f, -4.5f), 0);
+            other.transform.position = new Vector2(Random.Range(-2.5f, 2.5f), Random.Range(-2.5f, -4.5f));
+            Debug.Log("objects new location is " + other.transform.position);
+        }
+        */
+    }
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        Debug.Log("hit");
+        if (other.CompareTag("object"))
+        {
+            other.transform.position = new Vector2(Random.Range(-2.5f, 2.5f), Random.Range(-2.5f, -4.5f));
+            Debug.Log("objects new location is " + other.transform.position);
         }
     }
-    
+
 }
