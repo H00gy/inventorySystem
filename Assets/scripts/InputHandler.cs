@@ -58,5 +58,16 @@ public class InputHandler : MonoBehaviour
             draggedObject.position = mouseWorldPos + dragOffset; // maintain offset
         }
     }
-
+    public Transform getDraggedObj()
+    {
+        if (draggedObject != null)
+        {
+            return draggedObject;
+        }
+        else
+        {
+            return null;
+        }
+        
+    }
 }

@@ -3,12 +3,17 @@ using UnityEngine;
 public class spawnCircle : MonoBehaviour
 {
     public GameObject circle;
+    int count = 0;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(circle); 
+            GameObject spawnedCircle = Instantiate(circle); 
+            spawnedCircle.name = $"circle_{count}";
+            count++;
         }
     }
+    
+
 }

@@ -39,6 +39,6 @@ public class smoothCameraFollow : MonoBehaviour
         //transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref vel, damping);
 
         float newCamY = Mathf.SmoothDamp(transform.position.y, target.position.y, ref yVelocity, damping); // smooth damp to have camera only follow target using y axis
-        transform.position = new Vector3 (transform.position.x, newCamY,transform.position.z);
+        transform.position = new Vector3(transform.position.x, newCamY, transform.position.z);
     }
 }
