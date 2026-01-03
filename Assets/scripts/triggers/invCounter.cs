@@ -1,16 +1,28 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class invCounter : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public TMP_Text counterTXT;
+    int count = 0;
+    public void OnTriggerStay2D(Collider2D other)
     {
         
+        if (other.CompareTag("object"))
+        {
+            count++;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerExit2D(Collider2D other)
     {
-        
+        if (other.CompareTag("object"))
+        {
+            count--;
+        }
+    }
+    private void Update()
+    {
+        counterTXT.text = count.ToString();
     }
 }
