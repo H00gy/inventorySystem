@@ -3,6 +3,11 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
+    /// <summary>
+    /// input handler script used for mouse click moving 
+    /// primarily sourced via the YouTube channel "chonk"
+    /// link: https://www.youtube.com/watch?v=mRkFj8J7y_I&list=PL6yItMct2ybov1Z3InuFPpFmFY61NtOvH&index=42
+    /// </summary>
     private Camera MainCamera; //camera view
     private bool isDragging = false; // bool variable for checking when active
     private Vector3 dragOffset;
