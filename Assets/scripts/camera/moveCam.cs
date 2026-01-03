@@ -15,7 +15,7 @@ public class moveCam : MonoBehaviour
     public void toMain()
     {
         Debug.Log("clicked");
-        cam.transform.position = new Vector3(0f, -3.62f, -8.337676f);
+        cam.transform.position = new Vector3(0f, 0f, -8.337676f);
     }
 
     
