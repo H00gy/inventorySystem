@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class moveCam : MonoBehaviour
 {
-    // this script simply moves the camera to a different position when the inventory button is clicked
+    /// <summary>
+    /// this script simply moves the camera to a different position when the inventory button is clicked
+    /// </summary>
     Camera cam;
     
     void Start()
