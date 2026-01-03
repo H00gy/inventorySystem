@@ -6,11 +6,12 @@ public class invCounter : MonoBehaviour
 {
     public TMP_Text counterTXT;
     int count = 0;
-    public void OnTriggerStay2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         
         if (other.CompareTag("object"))
         {
+            
             count++;
         }
     }
@@ -18,6 +19,7 @@ public class invCounter : MonoBehaviour
     {
         if (other.CompareTag("object"))
         {
+           
             count--;
         }
     }
