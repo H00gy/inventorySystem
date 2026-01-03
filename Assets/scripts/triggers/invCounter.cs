@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class invCounter : MonoBehaviour
 {
     public TMP_Text counterTXT;
-    int count = 0;
+    static int count = 0;
     public void OnTriggerEnter2D(Collider2D other)
     {
         
         if (other.CompareTag("object"))
         {
-            
+            Debug.Log("count called");
             count++;
         }
     }
@@ -25,6 +25,7 @@ public class invCounter : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log("current count" + count);
         counterTXT.text = count.ToString();
     }
 }
