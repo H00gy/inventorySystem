@@ -4,9 +4,9 @@ This is a gameobject based inventory system I am developing for my upcoming indi
 # Demonstration
 ![animation](Assets/sprites/demonstration.gif)
 # Code 
-Enter Inventory [code](Assets/scripts/triggers/enterInv.cs)
-Exit Inventory [code](Assets/scripts/triggers/exitInv.cs)
-Move Camera [code](Assets/scripts/camera/moveCam.cs)
+Enter Inventory [code](Assets/scripts/triggers/enterInv.cs),
+Exit Inventory [code](Assets/scripts/triggers/exitInv.cs),
+Move Camera [code](Assets/scripts/camera/moveCam.cs),
 Inventory Counter [code](Assets/scripts/triggers/invCounter.cs)
 
 
