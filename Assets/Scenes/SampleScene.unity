@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 316746274}
   m_Layer: 0
   m_Name: counterTrigger
-  m_TagString: Untagged
+  m_TagString: nonGameObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 1222792016}
   m_Layer: 0
   m_Name: toInv
-  m_TagString: Untagged
+  m_TagString: nonGameObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1451,7 +1451,7 @@ GameObject:
   - component: {fileID: 1743485590}
   m_Layer: 0
   m_Name: toMain
-  m_TagString: Untagged
+  m_TagString: nonGameObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
