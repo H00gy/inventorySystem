@@ -56,7 +56,7 @@ public class InputHandler : MonoBehaviour
 
     private void Update()
     {
-        if (isDragging && draggedObject != null)
+        if (isDragging && draggedObject != null && !draggedObject.CompareTag("nonGameObj"))
         {
             Vector3 mouseWorldPos = MainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
             mouseWorldPos.z = 0f;
