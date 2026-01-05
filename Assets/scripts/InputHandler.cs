@@ -7,6 +7,7 @@ public class InputHandler : MonoBehaviour
     /// input handler script used for mouse click moving 
     /// primarily sourced via the YouTube channel "chonk"
     /// link: https://www.youtube.com/watch?v=mRkFj8J7y_I&list=PL6yItMct2ybov1Z3InuFPpFmFY61NtOvH&index=42
+    /// I made modifications for smoothness and this inventory use case
     /// </summary>
     private Camera MainCamera; //camera view
     private bool isDragging = false; // bool variable for checking when active
@@ -32,7 +33,7 @@ public class InputHandler : MonoBehaviour
         if (context.started)
         {
             var rayHit = Physics2D.GetRayIntersection(MainCamera.ScreenPointToRay(mousePosition)); //looks for collider to hit and then drag
-            if (rayHit.collider)
+            if (rayHit.collider != null && !rayHit.collider.CompareTag("nonGameObj"))
             {
                 Debug.Log("Click started on: " + rayHit.collider.gameObject.name);
                 isDragging = true;
@@ -56,7 +57,7 @@ public class InputHandler : MonoBehaviour
 
     private void Update()
     {
-        if (isDragging && draggedObject != null && !draggedObject.CompareTag("nonGameObj"))
+        if (isDragging && draggedObject != null)
         {
             Vector3 mouseWorldPos = MainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
             mouseWorldPos.z = 0f;
