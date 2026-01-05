@@ -14,9 +14,12 @@ public class InputHandler : MonoBehaviour
     private Vector3 dragOffset;
     private Transform draggedObject;
 
+    [SerializeField] private LayerMask draggableLayer;
+
     private void Awake()
     {
         SetCamera(Camera.main); //sets to where camera is
+        Debug.Log(Physics2D.queriesHitTriggers);
     }
 
 
@@ -32,16 +35,19 @@ public class InputHandler : MonoBehaviour
 
         if (context.started)
         {
-            var rayHit = Physics2D.GetRayIntersection(MainCamera.ScreenPointToRay(mousePosition)); //looks for collider to hit and then drag
-            if (rayHit.collider != null && !rayHit.collider.CompareTag("nonGameObj"))
+            Ray ray = MainCamera.ScreenPointToRay(mousePosition);
+
+            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, draggableLayer);
+
+            if (hit.collider != null)
             {
-                Debug.Log("Click started on: " + rayHit.collider.gameObject.name);
+                Debug.Log("Click started on: " + hit.collider.name);
                 isDragging = true;
-                draggedObject = rayHit.collider.transform;
+                draggedObject = hit.collider.transform;
 
                 Vector3 mouseWorldPos = MainCamera.ScreenToWorldPoint(mousePosition);
                 mouseWorldPos.z = 0f;
-                dragOffset = draggedObject.position - mouseWorldPos; // store offset
+                dragOffset = draggedObject.position - mouseWorldPos;
             }
         }
         else if (context.canceled)
