@@ -4,6 +4,7 @@ This is a gameobject based inventory system I am developing for my upcoming indi
 # Demonstration
 ![animation](Assets/sprites/demonstration.gif)
 # Code 
+Input Handler [code](Assets/scripts/InputHandler.cs)
 Enter Inventory [code](Assets/scripts/triggers/enterInv.cs),
 Exit Inventory [code](Assets/scripts/triggers/exitInv.cs),
 Move Camera [code](Assets/scripts/camera/moveCam.cs),
